@@ -1,84 +1,43 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    @include('partes.head')
-    <title>Mi Experiencia</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <style>
-        .experience-container {
-            display: flex;
-            align-items: center;
-            margin-bottom: 2rem;
-        }
-        .experience-container:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-        .experience-card {
-            flex: 1;
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            background-color: white;
-            margin: 1rem;
-        }
-        .experience-image {
-            flex: 1;
-            max-width: 300px;
-            margin: 1rem;
-        }
-        .experience-image img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-    </style>
-</head>
-<body>
-    @include('partes.navbar')
-
-    <div id="experiencia" class="container my-5">
-        <h1 class="text-center mb-5">Mi Experiencia</h1>
-        <div class="experience-container">
-            <div class="experience-card">
-                <h4>Desarrollador Web - Empressa Grupo Wesc</h4>
-                <p><small>Ene 2024 - Actualidad</small></p>
-                <p>Desarrollo de un sistema web de contabilidad desde cero utilizando tecnologías
-                    como HTML, CSS, JavaScript y bases de datos MySQL. Implementé
-                    funcionalidades para la gestión de ingresos, egresos, reportes financieros, y
-                    control de cuentas. Además, me encargué de asegurar que la plataforma fuera
-                    intuitiva y segura para los usuarios
-                </p>
-            </div>
-            <div class="experience-image">
-            <img src="{{ asset('img/grupowesc.jpeg') }}"alt="Imagen Empresa X">
-            </div>
+<section id="experiencia" class="container my-5 text-center">
+    <h2 class="mb-5">Mi Experiencia</h2>
+    <div class="experience-container d-flex align-items-center">
+        <div class="experience-card flex-fill p-3 bg-white shadow-sm m-2">
+            <h4>Desarrollador Web - Empresa Grupo Wesc</h4>
+            <p><small> 2024 - Terminado</small></p>
+            <p>Desarrollo de un sistema web de contabilidad utilizando HTML, CSS, JavaScript y MySQL. Implementé funcionalidades para la gestión de ingresos, egresos, reportes financieros y control de cuentas.</p>
         </div>
-
-        <!-- <div class="experience-container">
-            <div class="experience-image">
-                <img src="/images/empresa2.png" alt="Imagen Empresa Y">
-            </div>
-            <div class="experience-card">
-                <h4>Practicante - Empresa Y</h4>
-                <p><small>Jun 2021 - Dic 2021</small></p>
-                <p>Apoyo en la automatización de procesos internos mediante scripts en Python, logrando reducir el tiempo de tareas repetitivas en un 50%.</p>
-            </div>
+        <div class="experience-image flex-fill m-2" style="max-width:300px;">
+            <img src="{{ asset('img/grupowesc.jpeg') }}" alt="Imagen Empresa Grupo Wesc" class="img-fluid rounded shadow-sm">
         </div>
-
-        <div class="experience-container">
-            <div class="experience-card">
-                <h4>Estudiante - Universidad Z</h4>
-                <p><small>Mar 2018 - Dic 2022</small></p>
-                <p>Licenciatura en Ingeniería de Software con un enfoque en desarrollo web y sistemas de inteligencia artificial.</p>
-            </div>
-            <div class="experience-image">
-                <img src="/images/universidad.png" alt="Imagen Universidad Z">
-            </div>
-        </div> -->
     </div>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+    <div class="experience-container d-flex align-items-center">
+        <div class="experience-card flex-fill p-3 bg-white shadow-sm m-2">
+            <h4>Proyecto - Risai</h4>
+            <p><small> 2024 - Terminado</small></p>
+            <p>Desarrollé un sistema de seguridad inteligente con reconocimiento facial y de objetos, incorporando gráficos de clasificación y análisis avanzados</p>
+        </div>
+        <div class="experience-image flex-fill m-2" style="max-width:300px;">
+            <img src="{{ asset('img/risai.png') }}" alt="Imagen Empresa Grupo Wesc" class="img-fluid rounded shadow-sm">
+        </div>
+    </div>
+    <div class="experience-container d-flex align-items-center">
+        <div class="experience-card flex-fill p-3 bg-white shadow-sm m-2">
+            <h4>Proyecto - Joyeria</h4>
+            <p><small> 2024 - Terminado</small></p>
+            <p>Creé una tienda virtual para la venta de joyas, con un diseño tipo catálogo donde los usuarios pueden explorar productos, ver detalles y acceder a información clara y visualmente atractiva</p>
+        </div>
+        <div class="experience-image flex-fill m-2" style="max-width:300px;">
+            <img src="{{ asset('img/vk.jpeg') }}" alt="Imagen Empresa Grupo Wesc" class="img-fluid rounded shadow-sm">
+        </div>
+    </div>
+    <div class="experience-container d-flex align-items-center">
+        <div class="experience-card flex-fill p-3 bg-white shadow-sm m-2">
+            <h4>Proyecto - Ferretereria</h4>
+            <p><small> 2023 - Terminado</small></p>
+            <p>Desarrollé un sitio web informativo para una ferretería, presentando de manera clara y organizada los productos y servicios disponibles</p>
+        </div>
+        <div class="experience-image flex-fill m-2" style="max-width:300px;">
+            <img src="{{ asset('img/dino2.jpg') }}" alt="Imagen Empresa Grupo Wesc" class="img-fluid rounded shadow-sm">
+        </div>
+    </div>
+</section>

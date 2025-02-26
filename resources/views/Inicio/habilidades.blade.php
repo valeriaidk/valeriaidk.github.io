@@ -1,71 +1,84 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    @include('partes.head')
-    <title data-i18n="title">Habilidades</title>
+<style>
+    /* Efecto de movimiento y escala en las tarjetas */
+    .skill-card {
+        transition: transform 0.3s, box-shadow 0.3s;
+        border-radius: 10px;
+    }
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-</head>
-
-<body>
-    @include('partes.navbar')
-
-    <section id="habilidades" class="container my-5">
-        <h2 class="text-center mb-4" data-i18n="skills-title">Mis Habilidades</h2>
-        
-        <div class="row">
-            <!-- Habilidad 1 -->
-            <div class="col-md-4 mb-3">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body text-center">
-                        <i class="bi bi-code-slash display-4 text-primary"></i>
-                        <h5 class="card-title mt-3">HTML & CSS</h5>
-                        <p class="card-text">Desarrollo de interfaces web modernas y responsivas.</p>
-                        
-                        <!-- Barra de progreso -->
-                        <div class="progress">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Habilidad 2 -->
-            <div class="col-md-4 mb-3">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body text-center">
-                        <i class="bi bi-code display-4 text-warning"></i>
-                        <h5 class="card-title mt-3">JavaScript</h5>
-                        <p class="card-text">Desarrollo de funcionalidades interactivas y dinámicas.</p>
-                        
-                        <div class="progress">
-                            <div class="progress-bar bg-warning" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Habilidad 3 -->
-            <div class="col-md-4 mb-3">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body text-center">
-                        <i class="bi bi-layers display-4 text-info"></i>
-                        <h5 class="card-title mt-3">Laravel</h5>
-                        <p class="card-text">Desarrollo backend con PHP y Laravel.</p>
-                        
-                        <div class="progress">
-                            <div class="progress-bar bg-info" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
-                        </div>
-                    </div>
+    .skill-card:hover {
+        transform: translateY(-10px) scale(1.05);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    }
+</style>
+<section id="habilidades" class="container my-5 text-center">
+    <h2 class="mb-4" data-aos="fade-down">Mis Habilidades</h2>
+    <div class="row justify-content-center">
+        <!-- Habilidad 1: HTML & CSS -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm border-0 skill-card">
+                <div class="card-body text-center py-5">
+                    <i class="bi bi-code-slash display-1 text-primary mb-3"></i>
+                    <h5 class="card-title">HTML & CSS</h5>
+                    <p class="card-text text-muted">Desarrollo de interfaces web modernas y responsivas.</p>
                 </div>
             </div>
         </div>
-    </section>
+
+        <!-- Habilidad 2: JavaScript -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm border-0 skill-card">
+                <div class="card-body text-center py-5">
+                    <i class="bi bi-code display-1 text-warning mb-3"></i>
+                    <h5 class="card-title">JavaScript</h5>
+                    <p class="card-text text-muted">Funcionalidades interactivas y dinámicas.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Habilidad 3: Laravel -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm border-0 skill-card">
+                <div class="card-body text-center py-5">
+                    <i class="bi bi-layers display-1 text-info mb-3"></i>
+                    <h5 class="card-title">Laravel</h5>
+                    <p class="card-text text-muted">Desarrollo backend con PHP y Laravel.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Habilidad 4: Python -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm border-0 skill-card">
+                <div class="card-body text-center py-5">
+                    <i class="bi bi-file-earmark-code display-1 text-secondary mb-3"></i>
+                    <h5 class="card-title">Python</h5>
+                    <p class="card-text text-muted">Automatización y desarrollo de IA.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Habilidad 5: SQL -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm border-0 skill-card">
+                <div class="card-body text-center py-5">
+                    <i class="bi bi-database display-1 text-danger mb-3"></i>
+                    <h5 class="card-title">SQL y MYSQL</h5>
+                    <p class="card-text text-muted">Gestión de bases de datos relacionales.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Habilidad 6: Git -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm border-0 skill-card">
+                <div class="card-body text-center py-5">
+                    <i class="bi bi-git display-1 text-dark mb-3"></i>
+                    <h5 class="card-title">Git</h5>
+                    <p class="card-text text-muted">Control de versiones y colaboración.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>

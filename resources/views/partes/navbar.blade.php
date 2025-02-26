@@ -1,4 +1,4 @@
-<!-- Barra de navegación tipo MacOS Dock -->
+<!-- resources/views/partes/navbar.blade.php -->
 <nav class="navbar fixed-bottom navbar-dock">
   <div class="container-fluid d-flex justify-content-center">
       <ul class="navbar-nav d-flex flex-row gap-4">
@@ -35,19 +35,3 @@
       </ul>
   </div>
 </nav>
-
-<!-- Agrega el script de scroll suave justo antes de cerrar el body -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-  $(document).ready(function(){
-      $('a[href^="#"]').on('click', function(event) {
-          var target = $(this.getAttribute('href'));
-          if(target.length) {
-              event.preventDefault();
-              $('html, body').animate({
-                  scrollTop: target.offset().top - 50
-              }, 500);
-          }
-      });
-  });
-</script>
