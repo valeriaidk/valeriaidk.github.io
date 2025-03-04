@@ -4,7 +4,7 @@
         <!-- Proyecto 1 -->
         <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="100">
             <div class="card project-card shadow-sm">
-                <img src="{{ asset('img/proyecto1.jpg') }}" class="card-img-top project-image" alt="Proyecto 1">
+                <img src="{{ asset('img/grupowesc.jpeg') }}" class="card-img-top project-image" alt="Proyecto 1">
                 <div class="card-body">
                     <h5 class="card-title">Proyecto 1</h5>
                     <p class="card-text">Descripción breve del proyecto 1.</p>

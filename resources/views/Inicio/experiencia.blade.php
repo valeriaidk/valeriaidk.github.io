@@ -40,4 +40,14 @@
             <img src="{{ asset('img/dino2.jpg') }}" alt="Imagen Empresa Grupo Wesc" class="img-fluid rounded shadow-sm">
         </div>
     </div>
+    <div class="experience-container d-flex align-items-center">
+        <div class="experience-card flex-fill p-3 bg-white shadow-sm m-2">
+            <h4>Proyecto - Gestion de Contraseñas</h4>
+            <p><small> 2025 - Terminado</small></p>
+            <p>Desarrollo e implementación del sistema de gestión de contraseñas en una aplicación móvil.</p>
+        </div>
+        <div class="experience-image flex-fill m-2" style="max-width:300px;">
+            <img src="{{ asset('img/gestion.png') }}" alt="Imagen Empresa Grupo Wesc" class="img-fluid rounded shadow-sm">
+        </div>
+    </div>
 </section>
