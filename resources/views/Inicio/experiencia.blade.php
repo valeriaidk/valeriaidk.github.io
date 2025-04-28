@@ -5,6 +5,7 @@
     width: 100%;
     max-width: 1200px;
     margin: auto;
+    padding: 0 60px; /* Espacio para los botones */
   }
 
   .carousel-track {
@@ -16,7 +17,7 @@
     min-width: 100%;
     box-sizing: border-box;
     padding: 2rem;
-    background: #ffffff;
+    background: linear-gradient(145deg, var(--color-lighter), #ffffff);
     border-radius: 15px;
     box-shadow: 0 3px 15px rgba(0,0,0,0.1);
     display: flex;
@@ -24,74 +25,159 @@
     gap: 1.5rem;
     align-items: center;
     justify-content: space-between;
+    border: none;
   }
 
   .experience-image img {
     max-width: 300px;
     border-radius: 15px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .experience-image img:hover {
+    transform: scale(1.05);
   }
 
   .carousel-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 2rem;
-    background-color: rgba(0,0,0,0.3);
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-primary);
     color: white;
     border: none;
-    padding: 0.5rem 1rem;
+    border-radius: 50%;
     cursor: pointer;
     z-index: 10;
-    border-radius: 50%;
-    transition: background-color 0.3s;
-  }
-
-  .carousel-button.left {
-    left: -10px; /* fuera del contenido */
-  }
-
-  .carousel-button.right {
-    right: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   }
 
   .carousel-button:hover {
-    background-color: rgba(0,0,0,0.5);
+    background-color: var(--color-secondary);
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  .carousel-button.left {
+    left: 0;
+  }
+
+  .carousel-button.right {
+    right: 0;
+  }
+
+  .experience-content {
+    flex: 1;
+  }
+
+  .experience-content h4 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+  }
+
+  .experience-content p {
+    color: var(--color-secondary);
+  }
+
+  .experience-content small {
+    color: var(--color-accent);
   }
 
   @media (max-width: 768px) {
+    .carousel-container {
+      padding: 0 40px;
+    }
+
     .experience-card {
       flex-direction: column;
       text-align: center;
+      padding: 1.5rem;
     }
 
     .experience-image img {
       max-width: 100%;
+      margin-top: 1rem;
     }
 
-    /* Asegura visibilidad de botones en móviles */
-    .carousel-button.left {
-      left: 10px;
+    .carousel-button {
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
     }
 
-    .carousel-button.right {
-      right: 10px;
+    .experience-content h4 {
+      font-size: 1.2rem;
+    }
+
+    .experience-content p {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .carousel-container {
+      padding: 0 30px;
+    }
+
+    .experience-card {
+      padding: 1rem;
+    }
+
+    .experience-image img {
+      max-width: 90%;
+    }
+
+    .carousel-button {
+      width: 35px;
+      height: 35px;
+      font-size: 18px;
+    }
+
+    .experience-content h4 {
+      font-size: 1.1rem;
+    }
+
+    .experience-content p {
+      font-size: 0.85rem;
+    }
+
+    .section-title {
+      font-size: 1.75rem;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .experience-card {
+      padding: 2.5rem;
+    }
+
+    .experience-image img {
+      max-width: 350px;
     }
   }
 </style>
 
-<section id="experiencia" class="container pt-5 mt-5 text-center">
-  <h2 class="mb-5" style="color: #ffc107;">Mi Experiencia</h2>
+<section id="experiencia" class="container pt-5 mt-5">
+  <h2 class="section-title text-center" data-aos="fade-down">Mi Experiencia</h2>
 
   <div class="carousel-container">
-    <!-- Botones fuera de la tarjeta -->
-    <button class="carousel-button left" aria-label="Slide anterior" onclick="moveSlide(-1)">&#8249;</button>
-    <button class="carousel-button right" aria-label="Slide siguiente" onclick="moveSlide(1)">&#8250;</button>
+    <button class="carousel-button left" aria-label="Slide anterior" onclick="moveSlide(-1)">
+      <i class="bi bi-chevron-left"></i>
+    </button>
+    <button class="carousel-button right" aria-label="Slide siguiente" onclick="moveSlide(1)">
+      <i class="bi bi-chevron-right"></i>
+    </button>
 
     <div class="carousel-track" id="carousel-track">
       <!-- Slide 1 -->
       <div class="experience-card">
-        <div>
+        <div class="experience-content">
           <h4>Desarrollador Web - Empresa Grupo Wesc</h4>
           <p><small>2024 - Terminado</small></p>
           <p>Desarrollo de un sistema web de contabilidad utilizando HTML, CSS, JavaScript y MySQL. Gestión de ingresos, egresos, reportes financieros y cuentas.</p>
@@ -102,7 +188,7 @@
       </div>
       <!-- Slide 2 -->
       <div class="experience-card">
-        <div>
+        <div class="experience-content">
           <h4>Proyecto - Risai</h4>
           <p><small>2024 - Terminado</small></p>
           <p>Sistema de seguridad inteligente con reconocimiento facial y objetos, usando gráficos de clasificación y análisis avanzados.</p>
@@ -113,7 +199,7 @@
       </div>
       <!-- Slide 3 -->
       <div class="experience-card">
-        <div>
+        <div class="experience-content">
           <h4>Proyecto - Joyería</h4>
           <p><small>2024 - Terminado</small></p>
           <p>Tienda virtual tipo catálogo para venta de joyas, con navegación visual clara y atractiva.</p>
@@ -124,7 +210,7 @@
       </div>
       <!-- Slide 4 -->
       <div class="experience-card">
-        <div>
+        <div class="experience-content">
           <h4>Proyecto - Ferretería</h4>
           <p><small>2023 - Terminado</small></p>
           <p>Sitio informativo para ferretería, con productos y servicios organizados de forma clara.</p>
@@ -135,7 +221,7 @@
       </div>
       <!-- Slide 5 -->
       <div class="experience-card">
-        <div>
+        <div class="experience-content">
           <h4>Proyecto - Gestión de Contraseñas</h4>
           <p><small>2025 - Terminado</small></p>
           <p>Aplicación móvil para administrar contraseñas con seguridad y eficiencia.</p>
