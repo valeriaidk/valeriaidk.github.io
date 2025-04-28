@@ -1,14 +1,14 @@
-# Imágenes
-img/
-*.jpg
-*.jpeg
-*.png
-*.gif
-*.svg
-*.ico
+# # Imágenes
+# img/
+# *.jpg
+# *.jpeg
+# *.png
+# *.gif
+# *.svg
+# *.ico
 
-# PDFs
-*.pdf
+# # PDFs
+# *.pdf
 
 # Archivos del sistema
 .DS_Store
