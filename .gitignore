@@ -1,3 +1,34 @@
+# Imágenes
+img/
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.svg
+*.ico
+
+# PDFs
+*.pdf
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de caché
+*.log
+*.cache
+*.tmp
+
+# Archivos de dependencias
+node_modules/
+vendor/
+
 /.phpunit.cache
 /node_modules
 /public/build
@@ -25,9 +56,7 @@ npm-debug.log
 yarn-error.log
 /auth.json
 /.fleet
-/.idea
 /.nova
-/.vscode
 /.zed
 /public/img
 
