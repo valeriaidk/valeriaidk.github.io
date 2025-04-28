@@ -126,4 +126,17 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
-}); 
+});
+
+// Carrusel de experiencia
+let currentSlide = 0;
+const track = document.getElementById("carousel-track");
+const totalSlides = track.children.length;
+
+function moveSlide(direction) {
+    currentSlide += direction;
+    if (currentSlide < 0) currentSlide = totalSlides - 1;
+    if (currentSlide >= totalSlides) currentSlide = 0;
+    const slideWidth = track.children[0].offsetWidth;
+    track.style.transform = `translateX(-${slideWidth * currentSlide}px)`;
+} 
